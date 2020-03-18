@@ -94,6 +94,8 @@ export default {
       
       this.loading = true;
       const res = await axios.get("https://coronavirus-scrapy.herokuapp.com/");
+      
+      this.dateNoww = new Date().toLocaleString()
 
       this.res_data = res.data;
       this.loading = false;
