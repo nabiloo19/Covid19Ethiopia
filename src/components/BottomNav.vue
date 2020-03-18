@@ -7,7 +7,7 @@
         <template v-slot:activator="{ on }">
           <v-btn class="mt-3" outline depressed dark v-on="{...on, ...menu }">
             <span class="mt-2 mb-5">Contribute</span>
-            <v-icon>mdi-help</v-icon>
+            <v-icon>mdi-account-group</v-icon>
           </v-btn>
         </template>
 

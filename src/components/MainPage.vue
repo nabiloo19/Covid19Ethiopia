@@ -1,6 +1,6 @@
 <template>
   <v-container class="text-center">
-    <v-btn class="mt-4" rounded outlined v-on:click="get_from_server" :loading="loading">Get Data</v-btn>
+    <v-btn class="mt-4" rounded outlined v-on:click="get_from_server" :loading="loading">Refresh</v-btn>
     <v-divider class="mt-4"></v-divider>
     <div v-if="loading">
       <v-skeleton-loader boilerplate="false" type="article" tile="false" class="mx-auto"></v-skeleton-loader>
