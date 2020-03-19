@@ -7,8 +7,8 @@
     </div>
 
     <div v-else>
-      <p class="disp font-weight-bold mt-4">
-        Data are as of:
+      <p class="disp font-weight-bold mt-4 text-uppercase">
+        #Data are as of:
         <span class="disp font-weight-regular">{{dateNoww}} GMT+3</span>
       </p>
 
@@ -24,7 +24,7 @@
         <span class="disp font-weight-regular">{{res_data.total_case}}</span>
       </p>
       <p class="disp font-weight-bold">
-        New Cases (as of today ) :
+        New Cases (as of Today) :
         <span class="disp font-weight-regular">{{res_data.new_case}}</span>
       </p>
       <p class="disp font-weight-bold">
@@ -32,7 +32,7 @@
         <span class="disp font-weight-regular">{{res_data.total_death}}</span>
       </p>
       <p class="disp font-weight-bold">
-        New Deaths (as of today) :
+        New Deaths (as of Today) :
         <span class="disp font-weight-regular">{{res_data.new_death}}</span>
       </p>
       <p class="disp font-weight-bold">
@@ -54,6 +54,7 @@
           class="disp font-weight-regular"
         >{{res_data.total_cases_1_M_pop}}</span>
       </p>
+
       <v-divider></v-divider>
       <p class="disp font-weight-bold">
         <v-list rounded disabled>
@@ -87,25 +88,20 @@ export default {
   },
   created() {
     this.get_from_server();
-    
   },
   methods: {
     async get_from_server() {
-      
       this.loading = true;
       const res = await axios.get("https://coronavirus-scrapy.herokuapp.com/");
-      
-      this.dateNoww = new Date().toLocaleString()
+
+      this.dateNoww = new Date().toLocaleString();
 
       this.res_data = res.data;
       this.loading = false;
-      
-          
     },
     callFunction() {
-
       var currentDate = new Date();
-      
+
       var test1 = currentDate.toLocaleString();
 
       this.dateNoww = test1;

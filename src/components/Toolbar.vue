@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app dark>
     <div class="d-flex align-center">
-      <v-btn outline depressed href="#" dark>Covid-19 Ethiopia</v-btn>
+      <v-btn outline depressed @click.native.stop="$vuetify.goTo('*', options)" dark>Covid-19 Ethiopia</v-btn>
     </div>
 
     <v-spacer></v-spacer>
@@ -133,7 +133,12 @@ export default {
         link: "https://ourworldindata.org/coronavirus"
       }
     ],
-    dialog: false
+    dialog: false,
+      options: {
+        duration: 750,
+        offset: -10,
+        easing: "easeInOutCubic"
+      }
   })
 };
 </script>
