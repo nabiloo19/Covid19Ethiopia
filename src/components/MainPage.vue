@@ -61,7 +61,7 @@
             <v-list-tile-title class="disp font-weight-thin">#NOTE</v-list-tile-title>
             <v-list-item>
               <v-list-item-content>
-                <p>*Data is static and changed from time to time. Make sure you press the "Get Data" button regularly for updates</p>
+                <p>*Data is static and changed from time to time. Make sure you press the "Refresh" button regularly for updates</p>
               </v-list-item-content>
             </v-list-item>
           </v-list-item-group>

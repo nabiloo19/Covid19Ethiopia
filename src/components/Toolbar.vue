@@ -13,7 +13,7 @@
               <template v-slot:activator="{ on: tooltip }">
                 <v-btn outline depressed dark v-on="{ ...tooltip, ...menu }">
                   <span class="hidden-md-and-down">Contribute</span>
-                  <v-icon>mdi-account-group</v-icon>
+                  <v-icon class="ml-3">mdi-account-group</v-icon>
                 </v-btn>
               </template>
               <span>How To Contribute</span>
