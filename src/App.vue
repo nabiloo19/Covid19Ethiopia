@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <Toolbar />
-
     <v-content>
       <keep-alive>
         <MainPage />
@@ -25,8 +24,6 @@ export default {
     BottomNav
   },
 
-  data: () => ({
-    
-  })
+  data: () => ({})
 };
 </script>

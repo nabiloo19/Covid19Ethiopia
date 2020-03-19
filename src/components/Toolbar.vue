@@ -1,7 +1,12 @@
 <template>
   <v-app-bar app dark>
     <div class="d-flex align-center">
-      <v-btn outline depressed @click.native.stop="$vuetify.goTo('*', options)" dark>Covid-19 Ethiopia</v-btn>
+      <v-btn
+        outline
+        depressed
+        @click.native.stop="$vuetify.goTo('*', options)"
+        dark
+      >Covid-19 Ethiopia</v-btn>
     </div>
 
     <v-spacer></v-spacer>
@@ -77,7 +82,7 @@
 
             <!-- COVID DATA -->
 
-           <v-list-item href="https://covid-19.alibabacloud.com/" target="_blank">
+            <v-list-item href="https://covid-19.alibabacloud.com/" target="_blank">
               <v-list-item-icon>
                 <v-icon>mdi-link</v-icon>
               </v-list-item-icon>
@@ -134,11 +139,11 @@ export default {
       }
     ],
     dialog: false,
-      options: {
-        duration: 750,
-        offset: -10,
-        easing: "easeInOutCubic"
-      }
+    options: {
+      duration: 750,
+      offset: -10,
+      easing: "easeInOutCubic"
+    }
   })
 };
 </script>
