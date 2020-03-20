@@ -8,7 +8,7 @@
 
     <div v-else>
       <p class="disp font-weight-bold mt-4 text-uppercase">
-        #Data are as of:
+        #Last Update:
         <span class="disp font-weight-regular">{{dateNoww}} GMT+3</span>
       </p>
 
