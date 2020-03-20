@@ -1,6 +1,8 @@
 <template>
   <v-app-bar app dark>
     <div class="d-flex align-center">
+      
+      
       <v-btn
         outline
         depressed
@@ -138,6 +140,7 @@ export default {
         link: "https://ourworldindata.org/coronavirus"
       }
     ],
+    langs: ["en", "am"],
     dialog: false,
     options: {
       duration: 750,

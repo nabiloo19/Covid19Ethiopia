@@ -1,6 +1,5 @@
 {
-  "title": "OromoCovid-19 Ethiopia",
-
+  "title": "Covid-19 Itiyoophiyaa",
   "nav": {
     "contribute": "OromoContribute",
     "importantLinks": "OromoImportant Links",
@@ -8,19 +7,17 @@
     "contributeTxt": "OromoTo contribute, use the button below where you will find more information on the ways you can help out!",
     "contributeButton": "OromoCONTRIBUTE"
   },
-
-  
   "refreshButton": "OromoRefresh",
-  "country": "OromoEthiopia",
-  "lastUpdate": "OromoLast Update",
-  "totalCases": "OromoTotal Cases",
-  "newCases": "OromoNews Cases (as of Today)",
-  "totalDeathCases": "OromoTotal Death Cases",
-  "newDeathCases": "OromoNew Death Cases (as of Today)",
-  "totalRecoveredCases": "OromoTotal Recovered Cases",
-  "activeCases": "OromoActive Cases",
-  "seriousCases": "OromoSerious  Cases",
-  "outOf1m": "OromoTotal Cases out of 1 M pop",
-  "note": "OromoNote",
-  "noteTxt": "OromoData is static and changed from time to time. Make sure you press the 'Refresh' button regularly for updates"
+  "country": "Itiyoophiyaa ",
+  "lastUpdate": "Oddeeffannoo yeroo amma",
+  "totalCases": "Dhimma Waliigalaa",
+  "newCases": "Dhimma Haaraa (Hardha)",
+  "totalDeathCases": "Duaa Waliigala",
+  "newDeathCases": "Dhimma Du’aa Hardha",
+  "totalRecoveredCases": "Dhimma Fayyummaa",
+  "activeCases": "Dhimma  Waliigala yeroo ammaa",
+  "seriousCases": "Dhimma yaachisiisaa ",
+  "outOf1m": "Dhimma waliigala, Ummata mil. 1 kessa",
+  "note": "Hubannoo ",
+  "noteTxt": "oddeeffannoon kun yerroo yeroon kan jijjiiramuu wan ta’eef Mallattoo 'Refresh' Jedhu tuquun fooyyessuu dandessu!!"
 }

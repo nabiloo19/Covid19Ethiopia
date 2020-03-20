@@ -1,9 +1,21 @@
 <template>
   <v-container class="text-center">
+    <div>
 
-    
+      <select v-model="$i18n.locale">
+      <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
+      {{ lang }}
+      </option>
+    </select>
+    </div>
 
-    <v-btn class="mt-4" rounded outlined v-on:click="get_from_server" :loading="loading">{{$t('refreshButton')}}</v-btn>
+    <v-btn
+      class="mt-4"
+      rounded
+      outlined
+      v-on:click="get_from_server"
+      :loading="loading"
+    >{{$t('refreshButton')}}</v-btn>
     <v-divider class="mt-4"></v-divider>
     <div v-if="loading">
       <v-skeleton-loader boilerplate="false" type="article" tile="false" class="mx-auto"></v-skeleton-loader>
@@ -40,7 +52,9 @@
       </p>
       <p class="disp font-weight-bold">
         {{$t('totalRecoveredCases')}} :
-        <span class="disp font-weight-regular">{{res_data.total_recovered}}</span>
+        <span
+          class="disp font-weight-regular"
+        >{{res_data.total_recovered}}</span>
       </p>
       <p class="disp font-weight-bold">
         {{$t('activeCases')}} :
@@ -53,9 +67,7 @@
 
       <p class="disp font-weight-bold">
         {{$t('outOf1m')}} :
-        <span
-          class="disp font-weight-regular"
-        >{{res_data.total_cases_1_M_pop}}</span>
+        <span class="disp font-weight-regular">{{res_data.total_cases_1_M_pop}}</span>
       </p>
 
       <v-divider></v-divider>
@@ -83,6 +95,7 @@ export default {
 
   data: () => {
     return {
+      langs: ["en", "am"],
       res_data: {},
       loading: false,
       timeStamp: "",
