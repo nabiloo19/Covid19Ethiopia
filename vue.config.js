@@ -2,6 +2,7 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
+
   pwa: {
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
@@ -18,6 +19,15 @@ module.exports = {
           }
         }
       ]
+    }
+  },
+
+  pluginOptions: {
+    i18n: {
+      locale: 'en',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: false
     }
   }
 }

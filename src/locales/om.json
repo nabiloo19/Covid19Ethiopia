@@ -1,0 +1,26 @@
+{
+  "title": "OromoCovid-19 Ethiopia",
+
+  "nav": {
+    "contribute": "OromoContribute",
+    "importantLinks": "OromoImportant Links",
+    "contributeHeader": "OromoWant to Contribute",
+    "contributeTxt": "OromoTo contribute, use the button below where you will find more information on the ways you can help out!",
+    "contributeButton": "OromoCONTRIBUTE"
+  },
+
+  
+  "refreshButton": "OromoRefresh",
+  "country": "OromoEthiopia",
+  "lastUpdate": "OromoLast Update",
+  "totalCases": "OromoTotal Cases",
+  "newCases": "OromoNews Cases (as of Today)",
+  "totalDeathCases": "OromoTotal Death Cases",
+  "newDeathCases": "OromoNew Death Cases (as of Today)",
+  "totalRecoveredCases": "OromoTotal Recovered Cases",
+  "activeCases": "OromoActive Cases",
+  "seriousCases": "OromoSerious  Cases",
+  "outOf1m": "OromoTotal Cases out of 1 M pop",
+  "note": "OromoNote",
+  "noteTxt": "OromoData is static and changed from time to time. Make sure you press the 'Refresh' button regularly for updates"
+}

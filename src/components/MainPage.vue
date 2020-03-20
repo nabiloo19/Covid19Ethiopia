@@ -1,6 +1,9 @@
 <template>
   <v-container class="text-center">
-    <v-btn class="mt-4" rounded outlined v-on:click="get_from_server" :loading="loading">Refresh</v-btn>
+
+    
+
+    <v-btn class="mt-4" rounded outlined v-on:click="get_from_server" :loading="loading">{{$t('refreshButton')}}</v-btn>
     <v-divider class="mt-4"></v-divider>
     <div v-if="loading">
       <v-skeleton-loader boilerplate="false" type="article" tile="false" class="mx-auto"></v-skeleton-loader>
@@ -8,7 +11,7 @@
 
     <div v-else>
       <p class="disp font-weight-bold mt-4 text-uppercase">
-        #Last Update:
+        #{{$t('lastUpdate')}}:
         <span class="disp font-weight-regular">{{dateNoww}} GMT+3</span>
       </p>
 
@@ -16,40 +19,40 @@
         <v-avatar size="70" class="mr-4">
           <v-img src="@/assets/ethiopia.png"></v-img>
         </v-avatar>
-        {{res_data.country}}
+        {{$t('country')}}
       </h1>
 
       <p class="disp font-weight-bold mt-3">
-        Total Cases :
+        {{$t('totalCases')}} :
         <span class="disp font-weight-regular">{{res_data.total_case}}</span>
       </p>
       <p class="disp font-weight-bold">
-        New Cases (as of Today) :
+        {{$t('newCases')}} :
         <span class="disp font-weight-regular">{{res_data.new_case}}</span>
       </p>
       <p class="disp font-weight-bold">
-        Total Death Cases :
+        {{$t('totalDeathCases')}} :
         <span class="disp font-weight-regular">{{res_data.total_death}}</span>
       </p>
       <p class="disp font-weight-bold">
-        New Deaths (as of Today) :
+        {{$t('newDeathCases')}} :
         <span class="disp font-weight-regular">{{res_data.new_death}}</span>
       </p>
       <p class="disp font-weight-bold">
-        Total Recovered Cases :
+        {{$t('totalRecoveredCases')}} :
         <span class="disp font-weight-regular">{{res_data.total_recovered}}</span>
       </p>
       <p class="disp font-weight-bold">
-        Active Cases :
+        {{$t('activeCases')}} :
         <span class="disp font-weight-regular">{{res_data.active_case}}</span>
       </p>
       <p class="disp font-weight-bold">
-        Serious Cases :
+        {{$t('seriousCases')}} :
         <span class="disp font-weight-regular">{{res_data.serious_critical}}</span>
       </p>
 
       <p class="disp font-weight-bold">
-        Total Cases out of 1 M pop :
+        {{$t('outOf1m')}} :
         <span
           class="disp font-weight-regular"
         >{{res_data.total_cases_1_M_pop}}</span>
@@ -59,10 +62,10 @@
       <p class="disp font-weight-bold">
         <v-list rounded disabled>
           <v-list-item-group>
-            <v-list-tile-title class="disp font-weight-thin">#NOTE</v-list-tile-title>
+            <v-list-tile-title class="disp font-weight-thin">#{{$t('note')}}</v-list-tile-title>
             <v-list-item>
               <v-list-item-content>
-                <p>*Data is static and changed from time to time. Make sure you press the "Refresh" button regularly for updates</p>
+                <p>*{{$t('noteTxt')}}</p>
               </v-list-item-content>
             </v-list-item>
           </v-list-item-group>

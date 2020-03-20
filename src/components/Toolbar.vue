@@ -6,7 +6,7 @@
         depressed
         @click.native.stop="$vuetify.goTo('*', options)"
         dark
-      >Covid-19 Ethiopia</v-btn>
+      >{{$t('title')}}</v-btn>
     </div>
 
     <v-spacer></v-spacer>
@@ -17,21 +17,21 @@
             <v-tooltip bottom>
               <template v-slot:activator="{ on: tooltip }">
                 <v-btn outline depressed dark v-on="{ ...tooltip, ...menu }">
-                  <span class="hidden-md-and-down">Contribute</span>
+                  <span class="hidden-md-and-down">{{$t('nav.contribute')}}</span>
                   <v-icon class="ml-3">mdi-account-group</v-icon>
                 </v-btn>
               </template>
-              <span>How To Contribute</span>
+              <span>{{$t('nav.contributeHeader')}}</span>
             </v-tooltip>
           </v-btn>
         </template>
 
         <v-card>
-          <v-card-title class="headline grey lighten-2" primary-title>Want to Contribute</v-card-title>
+          <v-card-title class="headline grey lighten-2" primary-title>{{$t('nav.contributeHeader')}}</v-card-title>
 
           <v-card-text
             class="mt-3"
-          >To contribute, use the button below where you will find more information on the ways you can help out!</v-card-text>
+          >{{$t('nav.contributeTxt')}}</v-card-text>
 
           <v-divider></v-divider>
 
@@ -46,7 +46,7 @@
               href="https://github.com/nabiloo19/Covid19-Ethiopia-Links"
               target="_blank"
               @click="dialog = false"
-            >Contribute</v-btn>
+            >{{$t('nav.contributeButton')}}</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
@@ -56,15 +56,15 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on: tooltip }">
               <v-btn outline depressed dark v-on="{ ...tooltip, ...menu }">
-                <span class="mr-2 hidden-md-and-down">Important Links</span>
+                <span class="mr-2 hidden-md-and-down">{{$t('nav.importantLinks')}}</span>
                 <v-icon>mdi-link</v-icon>
               </v-btn>
             </template>
-            <span>Important Links</span>
+            <span>{{$t('nav.importantLinks')}}</span>
           </v-tooltip>
         </template>
         <v-list rounded>
-          <v-subheader>Important Links</v-subheader>
+          <v-subheader>{{$t('nav.importantLinks')}}</v-subheader>
           <v-list-item-group>
             <!-- WHO -->
 

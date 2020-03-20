@@ -1,0 +1,26 @@
+{
+  "title": "Covid-19 Ethiopia",
+
+  "nav": {
+    "contribute": "Contribute",
+    "importantLinks": "Important Links",
+    "contributeHeader": "Want to Contribute",
+    "contributeTxt": "To contribute, use the button below where you will find more information on the ways you can help out!",
+    "contributeButton": "CONTRIBUTE"
+  },
+
+  
+  "refreshButton": "Refresh",
+  "country": "Ethiopia",
+  "lastUpdate": "Last Update",
+  "totalCases": "Total Cases",
+  "newCases": "News Cases (as of Today)",
+  "totalDeathCases": "Total Death Cases",
+  "newDeathCases": "New Death Cases (as of Today)",
+  "totalRecoveredCases": "Total Recovered Cases",
+  "activeCases": "Active Cases",
+  "seriousCases": "Serious  Cases",
+  "outOf1m": "Total Cases out of 1 M pop",
+  "note": "Note",
+  "noteTxt": "Data is static and changed from time to time. Make sure you press the 'Refresh' button regularly for updates"
+}

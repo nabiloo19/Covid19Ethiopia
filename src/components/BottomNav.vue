@@ -6,17 +6,17 @@
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on }">
           <v-btn class="mt-3" outline depressed dark v-on="{...on, ...menu }">
-            <span class="mt-2 mb-5">Contribute</span>
+            <span class="mt-2 mb-5">{{$t('nav.contribute')}}</span>
             <v-icon>mdi-account-group</v-icon>
           </v-btn>
         </template>
 
         <v-card>
-          <v-card-title class="headline grey lighten-2" primary-title>Want to Contribute</v-card-title>
+          <v-card-title class="headline grey lighten-2" primary-title>{{$t('nav.contributeHeader')}}</v-card-title>
 
           <v-card-text
             class="mt-3"
-          >To contribute, use the button below where you will find more information on the ways you can help out!</v-card-text>
+          >{{$t('nav.contributeTxt')}}</v-card-text>
 
           <v-divider></v-divider>
 
@@ -31,7 +31,7 @@
               href="https://github.com/nabiloo19/Covid19-Ethiopia-Links"
               target="_blank"
               @click="dialog = false"
-            >Contribute</v-btn>
+            >{{$t('nav.contributeButton')}}</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
@@ -39,12 +39,12 @@
       <v-menu bottom origin="center center" transition="scale-transition">
         <template v-slot:activator="{ on: menu }">
           <v-btn class="mt-3" v-on="{ ...menu }">
-            <span class="mt-2 mb-5">Important Links</span>
+            <span class="mt-2 mb-5">{{$t('nav.importantLinks')}}</span>
             <v-icon>mdi-link</v-icon>
           </v-btn>
         </template>
         <v-list rounded>
-          <v-subheader>Important Links</v-subheader>
+          <v-subheader>{{$t('nav.importantLinks')}}</v-subheader>
           <v-list-item-group>
             <!-- WHO -->
 

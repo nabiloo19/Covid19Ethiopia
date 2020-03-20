@@ -1,0 +1,25 @@
+{
+  "title": "AmharicCovid-19 Ethiopia",
+
+  "nav": {
+    "contribute": "ተሳተፉ",
+    "importantLinks": "ጠቃሚ አድራሻዎች",
+    "contributeHeader": "AmharicWant to Contribute",
+    "contributeTxt": "AmharicTo contribute, use the button below where you will find more information on the ways you can help out!",
+    "contributeButton": "ተሳተፉ"
+  },
+
+  "refreshButton": "አድስ",
+  "country": "ኢትዮጵያ",
+  "lastUpdate": "AmharicLast Update",
+  "totalCases": "ጠቅላላ የተያዙ",
+  "newCases": "አዲስ የተያዙ",
+  "totalDeathCases": "AmharicTotal Death Cases",
+  "newDeathCases": "AmharicNew Death Cases (as of Today)",
+  "totalRecoveredCases": "ጠቅላላ ያገገሙ",
+  "activeCases": "ያላገገሙ",
+  "seriousCases": "በከባድ ደረጃ ላይ",
+  "outOf1m": "ጠቅላላ የተያዙ ከ 1ሚ ህዝብ",
+  "note": "AmharicNote",
+  "noteTxt": "AmharicData is static and changed from time to time. Make sure you press the 'Refresh' button regularly for updates"
+}
