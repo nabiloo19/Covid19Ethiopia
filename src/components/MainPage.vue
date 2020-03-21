@@ -127,6 +127,8 @@ export default {
 
       this.res_data = res.data;
       this.loading = false;
+      console.log(res);
+      console.log(res.data)
     },
     callFunction() {
       var currentDate = new Date();

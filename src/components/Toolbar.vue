@@ -136,6 +136,7 @@ export default {
   data: () => {
     return {
       langs: ["en", "am"],
+      
       items: [
         {
           title: "WHO",
