@@ -1,18 +1,26 @@
 <template>
   <v-app-bar app dark>
     <div class="d-flex align-center">
-      
-      
-      <v-btn
-        outline
-        depressed
-        @click.native.stop="$vuetify.goTo('*', options)"
-        dark
-      >{{$t('title')}}</v-btn>
+      <v-btn outline depressed @click.native.stop="$vuetify.goTo('*', options)" dark>{{$t('title')}}</v-btn>
     </div>
 
     <v-spacer></v-spacer>
     <div class="hidden-sm-and-down">
+      <v-select
+        v-model="$i18n.locale"
+        :items="langs"
+        item-text="state"
+        :item-value="lang"
+        label="Choose a Language"
+        persistent-hint
+        return-object
+        single-line
+        prepend-inner-icon="mdi-earth"
+        color="#000"
+        filled
+        outlined
+      ></v-select>
+
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on }">
           <v-btn dark outline depressed v-on="on">
@@ -31,9 +39,7 @@
         <v-card>
           <v-card-title class="headline grey lighten-2" primary-title>{{$t('nav.contributeHeader')}}</v-card-title>
 
-          <v-card-text
-            class="mt-3"
-          >{{$t('nav.contributeTxt')}}</v-card-text>
+          <v-card-text class="mt-3">{{$t('nav.contributeTxt')}}</v-card-text>
 
           <v-divider></v-divider>
 
@@ -127,26 +133,30 @@
 export default {
   name: "Toolbar",
 
-  data: () => ({
-    items: [
-      {
-        title: "WHO",
-        icon: mdi - link,
-        link: "https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
-      },
-      {
-        title: "Covid Data",
-        icon: mdi - link,
-        link: "https://ourworldindata.org/coronavirus"
+  data: () => {
+    return {
+      langs: ["en", "am"],
+      items: [
+        {
+          title: "WHO",
+          icon: mdi - link,
+          link:
+            "https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
+        },
+        {
+          title: "Covid Data",
+          icon: mdi - link,
+          link: "https://ourworldindata.org/coronavirus"
+        }
+      ],
+
+      dialog: false,
+      options: {
+        duration: 750,
+        offset: -10,
+        easing: "easeInOutCubic"
       }
-    ],
-    langs: ["en", "am"],
-    dialog: false,
-    options: {
-      duration: 750,
-      offset: -10,
-      easing: "easeInOutCubic"
-    }
-  })
+    };
+  }
 };
 </script>

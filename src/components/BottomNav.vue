@@ -14,9 +14,7 @@
         <v-card>
           <v-card-title class="headline grey lighten-2" primary-title>{{$t('nav.contributeHeader')}}</v-card-title>
 
-          <v-card-text
-            class="mt-3"
-          >{{$t('nav.contributeTxt')}}</v-card-text>
+          <v-card-text class="mt-3">{{$t('nav.contributeTxt')}}</v-card-text>
 
           <v-divider></v-divider>
 

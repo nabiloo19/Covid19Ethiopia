@@ -1,12 +1,24 @@
 <template>
   <v-container class="text-center">
     <div>
+      <v-select
+        v-model="$i18n.locale"
+        :items="langs"
+        item-text="state"
+        :item-value="langs"
+        label="Choose a Language"
+        persistent-hint
+        return-object
+        single-line
+        prepend-inner-icon="mdi-earth"
+        color="#000"
+        filled
+        outlined
+      ></v-select>
 
-      <select v-model="$i18n.locale">
-      <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
-      {{ lang }}
-      </option>
-    </select>
+      <!-- <select v-model="$i18n.locale">
+        <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+      </select>-->
     </div>
 
     <v-btn
@@ -95,7 +107,8 @@ export default {
 
   data: () => {
     return {
-      langs: ["en", "am"],
+      langs: ["English", "Amharic"],
+
       res_data: {},
       loading: false,
       timeStamp: "",
