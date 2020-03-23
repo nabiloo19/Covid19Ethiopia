@@ -2,12 +2,19 @@
   <v-container>
     <!-- Bottom Navigation -->
 
-    <v-bottom-navigation v-model="bottomNav" fixed grow color="#fff" class="hidden-sm-and-up" dark>
+    <v-bottom-navigation
+      v-model="bottomNav"
+      fixed
+      grow
+      dark
+      color="#4285ef"
+      class="hidden-sm-and-up"
+    >
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on }">
-          <v-btn class="mt-3" outline depressed dark v-on="{...on, ...menu }">
-            <span class="mt-2 mb-5">{{$t('nav.contribute')}}</span>
-            <v-icon>mdi-account-group</v-icon>
+          <v-btn class="mt-3" outline depressed v-on="{...on, ...menu }">
+            <span class="mt-2 mb-5 ">{{$t('nav.contribute')}}</span>
+            <v-icon >mdi-account-group</v-icon>
           </v-btn>
         </template>
 
@@ -69,12 +76,12 @@
             </v-list-item>
 
             <!-- Ethio Stats -->
-            <v-list-item href="https://www.worldofmeters.com/state/ethiopia" target="_blank">
+            <v-list-item href="https://www.google.com/covid19/" target="_blank">
               <v-list-item-icon>
                 <v-icon>mdi-link</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title>Ethiopia Stats</v-list-item-title>
+                <v-list-item-title>Google Covid Page</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
 
@@ -99,4 +106,21 @@
 </template>
 
 <script>
-</script>
+export default {
+  name: "BottomNav",
+
+  components: {},
+
+  data: () => {
+    return {
+      langs: ["en", "am"],
+
+      dialog: false,
+      options: {
+        duration: 750,
+        offset: -10,
+        easing: "easeInOutCubic"
+      }
+    };
+  }
+};

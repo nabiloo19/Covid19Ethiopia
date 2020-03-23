@@ -4,14 +4,12 @@
       <v-select
         v-model="$i18n.locale"
         :items="langs"
-        item-text="state"
         :item-value="langs"
         label="Choose a Language"
         persistent-hint
         return-object
         single-line
         prepend-inner-icon="mdi-earth"
-        color="#000"
         filled
         outlined
       ></v-select>
@@ -22,19 +20,25 @@
     </div>
 
     <v-btn
-    
-      class="mt-4"
+      class
       rounded
       outlined
       v-on:click="get_from_server"
       :loading="loading"
+      color="#4285ef"
     >{{$t('refreshButton')}}</v-btn>
     <v-divider class="mt-4"></v-divider>
     <div v-if="loading">
-      <v-skeleton-loader boilerplate="false" type="article" tile="true" transition="scale-transition" class="mx-auto"></v-skeleton-loader>
+      <v-skeleton-loader
+        boilerplate="false"
+        type="article"
+        tile="true"
+        transition="scale-transition"
+        class="mx-auto"
+      ></v-skeleton-loader>
     </div>
 
-    <div v-else  transition="scale-transition">
+    <div v-else transition="scale-transition">
       <p class="disp font-weight-bold mt-4 text-uppercase">
         #{{$t('lastUpdate')}}:
         <span class="disp font-weight-regular">{{dateNoww}} GMT+3</span>
@@ -120,16 +124,7 @@ export default {
     this.get_from_server();
   },
   methods: {
-
-    // test: function () {
-    //         var v = this;
-    //         setInterval(function () {
-    //             alert("Hi");
-    //         }, 3000);
-    //     },
-    
     async get_from_server() {
-      
       this.loading = true;
       const res = await axios.get("https://coronavirus-scrapy.herokuapp.com/");
 
@@ -137,8 +132,23 @@ export default {
 
       this.res_data = res.data;
       this.loading = false;
-      
     },
+
+    async test() {
+      var v = this;
+      setInterval(async function() {
+        this.loading = true;
+        const res = await axios.get(
+          "https://coronavirus-scrapy.herokuapp.com/"
+        );
+
+        this.dateNoww = new Date().toLocaleString();
+
+        this.res_data = res.data;
+        this.loading = false;
+      }, 3000);
+    },
+
     callFunction() {
       var currentDate = new Date();
 
@@ -149,8 +159,7 @@ export default {
   },
   mounted() {
     this.callFunction();
-    // this.test();
-
+    //this.test();
   }
 };
 </script>
