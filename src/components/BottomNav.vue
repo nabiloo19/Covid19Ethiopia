@@ -13,8 +13,8 @@
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on }">
           <v-btn class="mt-3" outline depressed v-on="{...on, ...menu }">
-            <span class="mt-2 mb-5 ">{{$t('nav.contribute')}}</span>
-            <v-icon >mdi-account-group</v-icon>
+            <span class="mt-2 mb-5">{{$t('nav.contribute')}}</span>
+            <v-icon>mdi-account-group</v-icon>
           </v-btn>
         </template>
 

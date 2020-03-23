@@ -1,13 +1,7 @@
 <template>
   <v-app-bar app dark>
     <div class="d-flex align-center">
-      <v-btn
-        
-        outline
-        depressed
-        
-        @click.native.stop="$vuetify.goTo('*', options)"
-      >{{$t('title')}}</v-btn>
+      <v-btn outline depressed @click.native.stop="$vuetify.goTo('*', options)">{{$t('title')}}</v-btn>
     </div>
 
     <v-spacer></v-spacer>

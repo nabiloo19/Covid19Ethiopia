@@ -59,7 +59,7 @@
           <template v-slot:activator="{ on: tooltip }">
             <v-btn outline depressed v-on="{ ...tooltip, ...menu }">
               <span class="mr-2 hidden-md-and-down">{{$t('nav.importantLinks')}}</span>
-              <v-icon >mdi-link</v-icon>
+              <v-icon>mdi-link</v-icon>
             </v-btn>
           </template>
           <span>{{$t('nav.importantLinks')}}</span>
