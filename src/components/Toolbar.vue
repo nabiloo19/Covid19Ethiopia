@@ -95,7 +95,7 @@
                 <v-icon>mdi-link</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title>Hand Book</v-list-item-title>
+                <v-list-item-title>Resources and Handbook</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
 
@@ -106,6 +106,36 @@
               </v-list-item-icon>
               <v-list-item-content>
                 <v-list-item-title>Ethiopia Stats</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+
+            <!-- COVID-19 Info -->
+            <v-list-item href="https://www.youtube.com/watch?v=BtN-goy9VOY" target="_blank">
+              <v-list-item-icon>
+                <v-icon>mdi-file-video</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>What is COVID-19?</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+
+            <!-- Multi-Lang Covid Info -->
+            <v-list-item href="https://t.me/covid19ethio" target="_blank">
+              <v-list-item-icon>
+                <v-icon>mdi-telegram</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Multi-Lang COVID-19 Info</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+
+            <!-- Ethio News -->
+            <v-list-item href="https://t.me/tikvahethiopia" target="_blank">
+              <v-list-item-icon>
+                <v-icon>mdi-telegram</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>Ethiopia News Amharic</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
 
