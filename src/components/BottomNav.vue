@@ -131,15 +131,23 @@
           </v-list-item-group>
         </v-list>
       </v-menu>
+      
     </v-bottom-navigation>
   </v-container>
 </template>
 
 <script>
+
+
+
+
+
 export default {
   name: "BottomNav",
 
-  components: {},
+  components: {
+    
+  },
 
   data: () => {
     return {
