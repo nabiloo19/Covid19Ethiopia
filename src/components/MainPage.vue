@@ -100,6 +100,67 @@
           </v-list-item-group>
         </v-list>
       </p>
+
+      <div>
+        <p class="display-1">Patients Details</p>
+
+        <v-btn
+          class
+          rounded
+          outlined
+          v-on:click="get_patients"
+          :loading="loadingPatient"
+          color="#4285ef"
+        >Get Patients</v-btn>
+
+        <div v-if="loadingPatient">
+          <v-skeleton-loader
+            boilerplate="false"
+            type="article"
+            tile="true"
+            transition="scale-transition"
+            class="mx-auto"
+          ></v-skeleton-loader>
+        </div>
+
+        <div v-else>
+          <v-expansion-panels>
+            <v-expansion-panel>
+              <v-expansion-panel-header></v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <p>
+                  Nationality:
+                  <span>{{res_patients.patient_nationality}}</span>
+                </p>
+                <p>
+                  Location:
+                  <span>{{res_patients.location}}</span>
+                </p>
+                <p>
+                  Recent Travel To:
+                  <span>{{res_patients.recent_travel_to}}</span>
+                </p>
+                <p>
+                  Age:
+                  <span>{{res_patients.age}}</span>
+                </p>
+                <p>
+                  Gender:
+                  <span>{{res_patients.gender}}</span>
+                </p>
+                <p>
+                  Status:
+                  <span>{{res_patients.status}}</span>
+                </p>
+                <p>
+                  Date Time Announced:
+                  <span>{{res_patients.date_time_announced}}</span>
+                </p>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </div>
+      </div>
     </div>
   </v-container>
 </template>
@@ -115,13 +176,16 @@ export default {
       langs: ["English", "Amharic"],
 
       res_data: {},
+      res_patients: {},
       loading: false,
+      loadingPatient: false,
       timeStamp: "",
       dialog: false
     };
   },
   created() {
     this.get_from_server();
+    this.get_patients();
   },
   methods: {
     async get_from_server() {
@@ -132,6 +196,17 @@ export default {
 
       this.res_data = res.data;
       this.loading = false;
+    },
+
+    async get_patients() {
+      // this.loadingPatient = true;
+      const res = await axios.get("https://api.pmo.gov.et/v1/patients/");
+      console.log(res);
+
+      this.dateNoww = new Date().toLocaleString();
+
+      this.res_patients = res.data;
+      // this.loadingPatient = false;
     },
 
     async test() {
