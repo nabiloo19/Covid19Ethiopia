@@ -203,7 +203,7 @@ export default {
       const res = await axios.get("https://api.pmo.gov.et/v1/patients/");
       console.log(res);
 
-      this.dateNoww = new Date().toLocaleString();
+      // this.dateNoww = new Date().toLocaleString();
 
       this.res_patients = res.data;
       // this.loadingPatient = false;
