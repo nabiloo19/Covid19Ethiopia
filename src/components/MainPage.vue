@@ -27,6 +27,11 @@
       :loading="loading"
       color="#4285ef"
     >{{$t('refreshButton')}}</v-btn>
+
+  <!-- <v-text-field v-model="name" type="text" rounded></v-text-field>
+
+  <p>{{name}}</p> -->
+
     <v-divider class="mt-4"></v-divider>
     <div v-if="loading">
       <v-skeleton-loader
@@ -49,6 +54,7 @@
           <v-img src="@/assets/ethiopia.png"></v-img>
         </v-avatar>
         {{$t('country')}}
+         <!-- {{res_data.country}} -->
       </h1>
 
       <p class="disp font-weight-bold mt-3">
@@ -81,12 +87,18 @@
         {{$t('seriousCases')}} :
         <span class="disp font-weight-regular">{{res_data.serious_critical}}</span>
       </p>
-
       <p class="disp font-weight-bold">
-        {{$t('outOf1m')}} :
-        <span class="disp font-weight-regular">{{res_data.total_cases_1_M_pop}}</span>
+        {{$t('totaltests')}} :
+        <span class="disp font-weight-regular">{{res_data.total_test}}</span>
       </p>
-
+      <p class="disp font-weight-bold">
+        {{$t('totaltestspermillion')}} :
+        <span class="disp font-weight-regular">{{res_data.total_test_1_m_pop}}</span>
+      </p>
+      <p class="disp font-weight-bold">
+        {{$t('population')}} :
+        <span class="disp font-weight-regular">{{res_data.population}}</span>
+      </p>
       <v-divider></v-divider>
       <p class="disp font-weight-bold">
         <v-list rounded disabled>
@@ -101,66 +113,7 @@
         </v-list>
       </p>
 
-      <div>
-        <p class="display-1">Patients Details</p>
-
-        <v-btn
-          class
-          rounded
-          outlined
-          v-on:click="get_patients"
-          :loading="loadingPatient"
-          color="#4285ef"
-        >Get Patients</v-btn>
-
-        <div v-if="loadingPatient">
-          <v-skeleton-loader
-            boilerplate="false"
-            type="article"
-            tile="true"
-            transition="scale-transition"
-            class="mx-auto"
-          ></v-skeleton-loader>
-        </div>
-
-        <div v-else>
-          <v-expansion-panels>
-            <v-expansion-panel>
-              <v-expansion-panel-header></v-expansion-panel-header>
-              <v-expansion-panel-content>
-                <p>
-                  Nationality:
-                  <span>{{res_patients.patient_nationality}}</span>
-                </p>
-                <p>
-                  Location:
-                  <span>{{res_patients.location}}</span>
-                </p>
-                <p>
-                  Recent Travel To:
-                  <span>{{res_patients.recent_travel_to}}</span>
-                </p>
-                <p>
-                  Age:
-                  <span>{{res_patients.age}}</span>
-                </p>
-                <p>
-                  Gender:
-                  <span>{{res_patients.gender}}</span>
-                </p>
-                <p>
-                  Status:
-                  <span>{{res_patients.status}}</span>
-                </p>
-                <p>
-                  Date Time Announced:
-                  <span>{{res_patients.date_time_announced}}</span>
-                </p>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-          </v-expansion-panels>
-        </div>
-      </div>
+      
     </div>
   </v-container>
 </template>
@@ -176,6 +129,7 @@ export default {
       langs: ["English", "Amharic"],
 
       res_data: {},
+      // name: "",
       res_patients: {},
       loading: false,
       loadingPatient: false,
@@ -190,7 +144,7 @@ export default {
   methods: {
     async get_from_server() {
       this.loading = true;
-      const res = await axios.get("https://coronavirus-scrapy.herokuapp.com/");
+      const res = await axios.get("https://coronavirus-scrapy.herokuapp.com/?country=ethiopia");
 
       this.dateNoww = new Date().toLocaleString();
 

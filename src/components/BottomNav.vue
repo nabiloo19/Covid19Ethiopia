@@ -76,15 +76,15 @@
             </v-list-item>
 
             <!-- Ethio Stats -->
-            <v-list-item href="https://www.google.com/covid19/" target="_blank">
+            <!-- <v-list-item href="https://www.google.com/covid19/" target="_blank">
               <v-list-item-icon>
                 <v-icon>mdi-link</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 <v-list-item-title>Google Covid Page</v-list-item-title>
               </v-list-item-content>
-            </v-list-item>
-            
+            </v-list-item>-->
+
             <!-- COVID-19 Info -->
             <v-list-item href="https://www.youtube.com/watch?v=BtN-goy9VOY" target="_blank">
               <v-list-item-icon>
@@ -131,22 +131,18 @@
           </v-list-item-group>
         </v-list>
       </v-menu>
-      
     </v-bottom-navigation>
   </v-container>
 </template>
 
 <script>
-
-
-
-
+import Content from "./Content";
 
 export default {
   name: "BottomNav",
 
   components: {
-    
+    Content
   },
 
   data: () => {

@@ -21,6 +21,9 @@
   "activeCases": "Active Cases",
   "seriousCases": "Serious  Cases",
   "outOf1m": "Total Cases out of 1 M pop",
+  "totaltests": "Total Tests",
+  "totaltestspermillion":"Tests Per 1 Million People",
+  "population":"Population",
   "note": "Note",
   "noteTxt": "Data is static and changed from time to time. Make sure you press the 'Refresh' button regularly for updates"
 }
