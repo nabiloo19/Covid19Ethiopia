@@ -79,6 +79,15 @@
           class="disp font-weight-regular"
         >{{res_data.total_recovered}}</span>
       </p>
+
+      <p class="disp font-weight-bold">
+        {{$t('newRecoveredCases')}} :
+        <span
+          class="disp font-weight-regular"
+        >{{res_data.new_recovered}}</span>
+      </p>
+
+      
       <p class="disp font-weight-bold">
         {{$t('activeCases')}} :
         <span class="disp font-weight-regular">{{res_data.active_case}}</span>

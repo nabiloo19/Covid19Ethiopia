@@ -18,6 +18,7 @@
   "totalDeathCases": "Total Death Cases",
   "newDeathCases": "New Death Cases (as of Today)",
   "totalRecoveredCases": "Total Recovered Cases",
+  "newRecoveredCases": "New Recovered Cases (as of Today)",
   "activeCases": "Active Cases",
   "seriousCases": "Serious  Cases",
   "outOf1m": "Total Cases out of 1 M pop",
