@@ -144,7 +144,7 @@ export default {
   methods: {
     async get_from_server() {
       this.loading = true;
-      const res = await axios.get("https://coronavirus-scrapy.herokuapp.com/?country=ethiopia");
+      const res = await axios.get("https://covids.vercel.app/?country=ethiopia");
 
       this.dateNoww = new Date().toLocaleString();
 
@@ -152,31 +152,31 @@ export default {
       this.loading = false;
     },
 
-    async get_patients() {
-      // this.loadingPatient = true;
-      const res = await axios.get("https://api.pmo.gov.et/v1/patients/");
-      console.log(res);
+    // async get_patients() {
+    //   // this.loadingPatient = true;
+    //   const res = await axios.get("https://api.pmo.gov.et/v1/patients/");
+    //   console.log(res);
 
-      // this.dateNoww = new Date().toLocaleString();
+    //   // this.dateNoww = new Date().toLocaleString();
 
-      this.res_patients = res.data;
-      // this.loadingPatient = false;
-    },
+    //   this.res_patients = res.data;
+    //   // this.loadingPatient = false;
+    // },
 
-    async test() {
-      var v = this;
-      setInterval(async function() {
-        this.loading = true;
-        const res = await axios.get(
-          "https://coronavirus-scrapy.herokuapp.com/"
-        );
+    // async test() {
+    //   var v = this;
+    //   setInterval(async function() {
+    //     this.loading = true;
+    //     const res = await axios.get(
+    //       "https://coronavirus-scrapy.herokuapp.com/"
+    //     );
 
-        this.dateNoww = new Date().toLocaleString();
+    //     this.dateNoww = new Date().toLocaleString();
 
-        this.res_data = res.data;
-        this.loading = false;
-      }, 3000);
-    },
+    //     this.res_data = res.data;
+    //     this.loading = false;
+    //   }, 3000);
+    // },
 
     callFunction() {
       var currentDate = new Date();
